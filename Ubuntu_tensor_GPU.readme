@@ -1,0 +1,30 @@
+1. mkdir    ml_tensor
+2. cd   ml_tensor
+3. virtualenv  env
+4. source env/bin/activate
+5. (env) ~/ml_tensor$ 
+6. (env) ~/ml_tensor$ pip3 install --upgrade jupyter matplotlib numpy
+7. (env) ~/ml_tensor$ python
+Python 3.6.6 (default, Sep 12 2018, 18:26:19) 
+[GCC 8.0.1 20180414 (experimental) [trunk revision 259383]] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>>
+>>> import tensorflow as tf
+>>> print(tf.__version__)
+1.5.0
+>>> h=tf.constant('I love')
+>>> w=tf.constant(' neural net')
+>>> hw=h+w
+>>> with tf.Session() as sess:
+...     ans=sess.run(hw)
+... 
+2018-11-17 09:23:20.109665: I tensorflow/core/platform/cpu_feature_guard.cc:137] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2
+2018-11-17 09:23:20.273362: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:895] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2018-11-17 09:23:20.273590: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1105] Found device 0 with properties: 
+name: GeForce GTX 1050 major: 6 minor: 1 memoryClockRate(GHz): 1.455
+pciBusID: 0000:01:00.0
+totalMemory: 1.95GiB freeMemory: 1.61GiB
+2018-11-17 09:23:20.273607: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1195] Creating TensorFlow device (/device:GPU:0) -> (device: 0, name: GeForce GTX 1050, pci bus id: 0000:01:00.0, compute capability: 6.1)
+
+>>> print(ans)
+b'I love neural net'
