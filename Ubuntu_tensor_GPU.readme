@@ -4,7 +4,8 @@
 4. source env/bin/activate
 5. (env) ~/ml_tensor$ 
 6. (env) ~/ml_tensor$ pip3 install --upgrade jupyter matplotlib numpy
-7. (env) ~/ml_tensor$ python
+7. (env) ~/ml_tensor$ pip3 install --upgrade tensorflow-gpu==1.5
+8. (env) ~/ml_tensor$ python
 Python 3.6.6 (default, Sep 12 2018, 18:26:19) 
 [GCC 8.0.1 20180414 (experimental) [trunk revision 259383]] on linux
 Type "help", "copyright", "credits" or "license" for more information.
