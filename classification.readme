@@ -1,0 +1,21 @@
+
+train_logit.py :   
+
+(1)  each batch  has size 128
+(2)  saver=tf.train.Saver()
+(3)  save_path=saver.save(sess,"/tmp/my_model_final.ckpt")
+
+after run
+in /tmp:   we have stored the weights and bias:
+-rw-r--r-- 1 larry larry       333  十  28 19:37 my_model_final.ckpt.index
+-rw-r--r-- 1 larry larry     94208  十  28 19:37 my_model_final.ckpt.data-00000-of-00001
+-rw-r--r-- 1 larry larry       105  十  28 19:37 checkpoint
+-rw-r--r-- 1 larry larry 209071509  十  28 19:37 my_model_final.ckpt.meta
+
+------------------------------------------------------------------------------------------------
+
+then 
+test_restored_model_logit.ipynb:   restore the weights from /tmp  and do the recognition
+
+
+
